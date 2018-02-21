@@ -1,0 +1,25 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"properties": {
+		"signed_at": {
+			"format": "datetime"
+		},
+		"file_tags": {
+			"$ref": "defs#/props/fileTag"
+		},
+		"file_tag": {
+			"$ref": "defs#/props/fileTag"
+		},
+		"^file_tag_path[0-9]+$": {
+			"$ref": "defs#/props/filePDFExtension"
+		},
+		"^file_tag_size[0-9]+$": {
+			"$ref": "defs#/props/fileSize"
+		}
+	},
+	"required": [
+		"signed_at", "file_tags", "file_tag"
+	]
+	
+}

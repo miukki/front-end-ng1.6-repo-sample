@@ -1,0 +1,35 @@
+{
+"host": {
+  "api": {
+    "staging": "api.miukki.com",
+    "production": "api.miukki.com",
+    "testing": "api.miukki.com",
+    "dev": "api.miukki.com",
+    "test": "unit-test.local"
+  }
+
+},
+  "rollbar": {
+    "staging": ":staging",
+  },
+  "app" :  {
+    "src": "app",
+    "generated": "app/scripts/generated",
+    "dist": "dist",
+    "tmp": ".tmp",
+    "bootstrap": {
+      "v": "2.2.0"
+    },
+    "docs": "docs"
+  },
+  "ext": "{html,htm,tmpl,tpl}",
+  "dest": {
+    "staging": "dist",
+    "production": "dist",
+    "testing": "dist",
+    "dev": ".tmp",
+    "test": ".tmp"
+  },
+  "global_assets": "path/to/assets",
+  "global_bower": "path/to/components"
+}

@@ -1,0 +1,53 @@
+## Customize the test machine
+machine:
+  # Version of ruby to use
+  ruby:
+    version:
+      2.2.3
+  node:
+    version:
+      8.1.0
+  yarn:
+    version:
+      0.27.5
+
+  
+  pre:
+    - sudo apt-get update
+    - sudo apt-get install build-essential libssl-dev
+    - yarn --version
+
+## Customize dependencies
+dependencies:
+  pre:
+    - gem install bundler
+    - yarn global add bower grunt-cli
+  override:
+    - bundle install: # note ':' here
+        timeout: 190
+    - yarn install
+    - bower install --force
+    - cd bower_components/ui-assets-repo-sample; yarn install --production
+    - cd bower_components/ui-assets-repo-sample; bower install --production
+    - cd bower_components/ui-assets-repo-sample; PROJECT=:project yarn run sass && yarn run prefixer
+
+
+## Customize test commands
+test:
+  override:
+    - yarn run test
+
+## Customize deployment commands
+deployment:
+  staging:
+    branch: develop
+    commands:
+      - cap staging deploy
+  testing:
+    branch: testing
+    commands:
+      - cap testing deploy
+  production:
+    branch: master
+    commands:
+      - cap production deploy

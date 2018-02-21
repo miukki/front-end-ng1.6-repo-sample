@@ -1,0 +1,47 @@
+{
+  "name": "app-web",
+  "authors": [
+    "EIC"
+  ],
+  "description": "",
+  "main": "app/index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "html5shiv": "^3.6",
+    "es5-shim": "^4.5.9",
+    "angular": "1.6.5",
+    "angular-animate": "1.6.5",
+    "angular-route": "1.6.5",
+    "prepsmith_global_assets": "git@github.com:Prepsmith/prepsmith_global_assets.git#a654972e6b806201f97797599cdea5bd8d6961e7",
+    "angular-spinner": "^0.8.1",
+    "ng-rollbar": "^1.9.1",
+    "angular-resource": "1.6.5",
+    "ng-lodash": "~0.5.0",
+    "tv4": "~1.2.7",
+    "angular-sanitize": "1.6.5",
+    "angular-smart-table": "2.1.8",
+    "angular-filter": "0.5.16",
+    "angular-bootstrap": "^2.2.0",
+    "newrelic-angular": "^0.2.2"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.6.5"
+  },
+  "resolutions": {
+    "angular": "1.6.5",
+    "tv4": "~1.2.7"
+  },
+  "overrides": {
+    "angular-bootstrap": {
+      "main": "./ui-bootstrap.js"
+    }
+  }
+}

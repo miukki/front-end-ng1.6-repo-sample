@@ -1,0 +1,8 @@
+{
+  "API": "https://unit-test.local/app",
+  "stampAPI": "https://stamp.testing.miukki.com",
+  "resp": {
+    "opportunity": {"Opportunity":{"Intended_Office__c":"国贸","Project__c":"加拿大"}}
+  }
+}
+
